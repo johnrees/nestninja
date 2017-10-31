@@ -1886,4 +1886,4 @@
     }
   };
 
-module.exports = GeometryUtil
+export default GeometryUtil
