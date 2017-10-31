@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "allowJs": true,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noStrictGenericChecks": true,
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "outDir": "built"
+  },
+  "exclude": [
+    "dist/**/*",
+    "node_modules/**/*",
+    "tmp/**/*"
+  ]
+}
