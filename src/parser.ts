@@ -261,20 +261,21 @@ export default class Parser {
     const poly = [];
     let i, cx, cy, num;
 
-    // console.log("POLY", element.tagName);
+    console.log("POLY", element.tagName);
 
     switch (element.tagName) {
       case "polygon":
+        element = element as SVGPolygonElement;
       case "polyline":
         // console.log(">>>", element.tagName);
-        element = <SVGPolygonElement | SVGPolylineElement>element;
-        console.log(element);
-        for (i = 0; i < element.points.length; i++) {
-          poly.push({
-            x: element.points[i].x,
-            y: element.points[i].y
-          });
-        }
+        element = element as SVGPolylineElement;
+        console.log(JSON.stringify(element))
+        // for (i = 0; i < element.points.length; i++) {
+        //   poly.push({
+        //     x: element.points[i].x,
+        //     y: element.points[i].y
+        //   });
+        // }
         break;
       case "rect":
         element = <SVGRectElement>element;
@@ -522,7 +523,8 @@ export default class Parser {
       poly.pop();
     }
 
-    return poly;
+    // return poly;
+    return [1,2,3]
   }
 
   clean() {
